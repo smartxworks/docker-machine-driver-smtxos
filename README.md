@@ -1,5 +1,7 @@
 # Docker Machine Driver of SMTX OS
 
+[![Build Status](https://travis-ci.org/smartxworks/docker-machine-driver-smtxos.svg?branch=master)](https://travis-ci.org/smartxworks/docker-machine-driver-smtxos)
+
 Create Docker machines remotely on [SMTX OS](https://www.smartx.com/smtx-os/). This driver requires SMTX OS 4.0 or above. Earlier versions of SMTX OS will not work with this driver.
 
 ## Installation
