@@ -16,13 +16,13 @@ vendor:
 
 .PHONY: build
 build:
-	docker run --privileged --rm \
-		-v $(shell pwd):/go/src/$(REPO) -w /go/src/$(REPO) \
-		golang:1.12 make _build
+	GOOS=linux GOARCH=amd64 go build .
 
 .PHONY: _build
 _build:
-	GOOS=linux GOARCH=amd64 go build .
+	docker run --privileged --rm \
+		-v $(shell pwd):/go/src/$(REPO) -w /go/src/$(REPO) \
+		golang:1.12 make build
 
 .PHONY: tar
 tar:

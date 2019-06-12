@@ -1,0 +1,13 @@
+language: go
+go: 1.12
+install: false
+script: make
+deploy:
+  provider: releases
+  api_key:
+    secure: "A6NeOaogkzO9T3TVMh1U9agTDH2VFFjAOoUnf+8dxeyxXQwU7IN4RhD/bQlPBoZWQxwD/S22zo2dqGvCzLaOUscNq20MbXS0C5zI0n4hAOiruN3cofA91jlEXKbFozFNE7pQXPkU423IROyANFpUIzp0l2YlYLM6TaML6NxNR2vLLOU//DReIYScZG+yrHNVcOU/LTDeNqRgNbXZiswQV46d8YvKO5eMudhqNmp6J8QMsVJZjTnsHpBH8IiR8NzXXbFG5t5ugX1QTR//jdxSI0Wzv3yELE8VyenM8Dl5ZjTwumG2KFt4+Ekn+JI2fWFEMAh8UM61txsl1gckLWYpoNjATdVzk1o0286hmaqls6Pj/BkCBzx7XoQrczrmHEk6WJywaeuNrhV1mcBRDWXvaNDxeZteK1OdiERhnCGKmD9MhkQXxFYvQvNPjKkhUlP+hyMpuncN/A5Ab0vmY2478SOkiez2WnUsz4RsCjmiipmPjxiwKBhjUokkKZyj9nfpJaHYO2fum7qaNrw6V5oQg9o8mIUa7BQ3V3MAgqkvfUECT1G365oEa254ZAuffh4LhL+nmM3MZJZ/F6zFp18ftNXVazzR2JjwVA2rPhm9IHKu6P0McVLjKFCnvecRb537sLxQVnJiv+xlYW2BLtyA608llHuXnRTIOCYDWFk2YF4="
+  file_glob: true
+  file: docker-machine-driver-smtxos-*.tar.gz
+  skip_cleanup: true
+  on:
+    tags: true
