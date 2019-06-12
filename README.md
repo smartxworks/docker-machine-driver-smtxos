@@ -45,7 +45,3 @@ docker-machine create -d smtxos --help
 | `--smtxos-dockeros-image-path`    | `SMTXOS_DOCKEROS_IMAGE_PATH`  | `[kubernetes]/SMTX-DockerOS.raw`  | path of DockerOS image on SMTX OS, in the format of `[datastore-name]/file-path` |
 | `--smtxos-network-name`           | `SMTXOS_NETWORK_NAME`         | `default`                         | network name for VM |
 | `--smtxos-ha`                     | `SMTXOS_HA`                   | `false`                           | whether to enable high availability for VM |
-
-## License
-
-[Apache 2.0](https://github.com/smartxworks/docker-machine-driver-smtxos/blob/master/LICENSE)
